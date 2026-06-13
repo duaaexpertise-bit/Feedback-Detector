@@ -1,0 +1,49 @@
+body{
+    font-family:Arial;
+    margin:0;
+    text-align:center;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:#111827;
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+}
+
+.hero{
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+button{
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.card{
+    display:inline-block;
+    width:250px;
+    margin:15px;
+    padding:25px;
+    border:1px solid #ddd;
+    border-radius:15px;
+}
+
+textarea{
+    width:80%;
+    height:120px;
+    padding:15px;
+}
