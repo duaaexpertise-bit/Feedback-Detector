@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Detector AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h2>Feedback Detector</h2>
+
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+
+    <button onclick="tryDemo()">
+        Try Free
+    </button>
+</nav>
+
+<section class="hero">
+
+    <h1>
+        Analyze Email Tone Using AI
+    </h1>
+
+    <p>
+        Detect positive, negative, and neutral feedback instantly and generate professional replies.
+    </p>
+
+    <button onclick="tryDemo()">
+        Start Free
+    </button>
+
+</section>
+
+<section id="features">
+
+    <h2>Features</h2>
+
+    <div class="card">
+        Email Tone Detection
+    </div>
+
+    <div class="card">
+        AI Reply Generator
+    </div>
+
+    <div class="card">
+        Customer Feedback Analysis
+    </div>
+
+</section>
+
+<section class="demo">
+
+    <h2>Try Demo</h2>
+
+    <textarea id="email"
+    placeholder="Paste email here"></textarea>
+
+    <button onclick="analyze()">
+        Analyze
+    </button>
+
+    <div id="result"></div>
+
+</section>
+
+<section id="pricing">
+
+    <h2>Pricing</h2>
+
+    <div class="card">
+        <h3>Free</h3>
+        <p>5 analyses/day</p>
+    </div>
+
+    <div class="card">
+        <h3>Plus</h3>
+        <p>Unlimited analyses</p>
+    </div>
+
+    <div class="card">
+        <h3>Enterprise</h3>
+        <p>API Access</p>
+    </div>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
