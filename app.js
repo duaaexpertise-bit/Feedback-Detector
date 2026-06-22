@@ -1,30 +1,16 @@
-function tryDemo(){
-    document
-    .querySelector(".demo")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-}
+const express = require('express');
+const path = require('path');
+const app = express();
 
-function analyze(){
+// 1. Static files serve karo - index.html, CSS, JS
+app.use(express.static(path.join(__dirname)));
 
-    let email =
-    document.getElementById("email").value;
+// 2. Home page route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
-    let result =
-    document.getElementById("result");
-
-    if(email===""){
-        result.innerHTML =
-        "Please paste an email.";
-        return;
-    }
-
-    result.innerHTML =
-    `
-    Tone: Positive<br>
-    Confidence: 92%<br>
-    AI Reply:
-    Thank you for your feedback.
-    `;
-}
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
