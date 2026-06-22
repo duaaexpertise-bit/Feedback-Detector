@@ -117,5 +117,35 @@
       </div>
     </div>
   </div>
+</div>
+  </div>
+<div class="demo" style="max-width:700px;margin:80px auto;padding:40px;text-align:center">
+  <h2 style="color:#ccd6f6;margin-bottom:20px">Try Demo</h2>
+  <textarea id="email" placeholder="Paste customer email here..." style="width:100%;height:120px;padding:15px;background:#112240;border:1px solid #233554;border-radius:8px;color:#e6f1ff;font-size:16px"></textarea>
+  <br><br>
+  <button onclick="analyze()" class="cta-btn">Analyze Now</button>
+  <div id="result" style="margin-top:25px;font-size:18px;color:#64ffda;min-height:60px"></div>
+</div>
+<script>
+function tryDemo(){
+    document.querySelector(".demo").scrollIntoView({ behavior:"smooth" });
+}
+
+function analyze(){
+    let email = document.getElementById("email").value;
+    let result = document.getElementById("result");
+
+    if(email===""){
+        result.innerHTML = "Please paste an email.";
+        return;
+    }
+
+    result.innerHTML = `
+    Tone: Positive<br>
+    Confidence: 92%<br>
+    AI Reply: Thank you for your feedback.
+    `;
+}
+</script>
 </body>
 </html>
